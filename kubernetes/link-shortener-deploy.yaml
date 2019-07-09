@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: link-shortener
+  labels:
+    app: link-shortener
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+  selector:
+    app: link-shortener
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: link-shortener
+  labels:
+    app: link-shortener
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: link-shortener
+  template:
+    metadata:
+      labels:
+        app: link-shortener
+    spec:
+      containers:
+      - name: link-shortener
+        image: link-shortener
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+        env:
+        - name: MONGO_DATABASE
+          valueFrom:
+            configMapKeyRef:
+              name: mongodb
+              key: database-name
+        - name: MONGO_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongodb
+              key: database-user
+        - name: MONGO_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongodb
+              key: database-password
