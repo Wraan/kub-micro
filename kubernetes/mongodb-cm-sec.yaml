@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: mongodb
 data:
-  database-name: link-shortener
+  database-name: admin
 ---
 apiVersion: v1
 kind: Secret
@@ -11,5 +11,5 @@ metadata:
   name: mongodb
 type: Opaque
 data:
-  database-password: UGlvdF8xMjM=
-  database-user: cGlvdHI=
+  database-password: cGFzc3dvcmQ=
+  database-user: d3Jhbg==

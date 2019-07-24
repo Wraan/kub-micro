@@ -1,5 +1,5 @@
 FROM openjdk:8-jre-alpine
-ENV APP_FILE link-shortener-0.0.1-SNAPSHOT.jar
+ENV APP_FILE link-shortener.jar
 ENV APP_HOME /usr/apps
 EXPOSE 8080
 COPY target/$APP_FILE $APP_HOME/

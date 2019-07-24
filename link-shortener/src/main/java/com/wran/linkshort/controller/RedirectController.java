@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Calendar;
+import java.util.Date;
+
 @Controller
 public class RedirectController {
 
@@ -21,17 +24,42 @@ public class RedirectController {
     @GetMapping("/")
     @ResponseBody
     public String mainPage(){
+        LOGGER.info("Showing Home page");
         return "Hello :)";
+    }
+
+    @GetMapping("/test")
+    @ResponseBody
+    public String mainPage2(){
+        LOGGER.info("Showing Home page2");
+        return "Hello2 :)";
+    }
+
+    @GetMapping("/expired")
+    @ResponseBody
+    public String expiredPage(){
+        return "Expired";
+    }
+
+    @GetMapping("/not-found")
+    @ResponseBody
+    public String notFound(){
+        return "Not found";
     }
 
     @GetMapping("/{link}")
     public String redirect(@PathVariable("link") String shortLink){
-        Link link = linkService.findByShortenedLink(shortLink);
+        Link link = linkService.findByShortLink(shortLink);
         if(link == null){
-            LOGGER.info("Not found short link: {}", shortLink);
-            return "forward:/";
+            LOGGER.info("Short link not found: {}", shortLink);
+            return "redirect:/not-found";
         }
-        LOGGER.info("Redirected to: {}", link.getLongLink());
+        if(new Date().after(link.getExpires())){
+            LOGGER.info("Short link expired: {}", shortLink);
+            return "redirect:/expired";
+        }
+        LOGGER.info("Short link found: {} - redirecting to long link", link.getShortLink());
+        link = linkService.increaseTimesUsed(link);
         return "redirect:" + link.getLongLink();
     }
 }

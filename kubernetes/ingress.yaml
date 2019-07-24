@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: gateway-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  backend:
+    serviceName: default-http-backend
+    servicePort: 80
+  rules:
+  - http:
+      paths:
+      - path: /link(/|$)(.*)
+        backend:
+          serviceName: link-shortener
+          servicePort: 8080
+      - path: /auth(/|$)(.*)
+        backend:
+          serviceName: auth-server
+          servicePort: 8801

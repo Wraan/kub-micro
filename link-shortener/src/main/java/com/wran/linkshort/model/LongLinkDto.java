@@ -4,17 +4,28 @@ public class LongLinkDto {
 
     private String link;
     private int liveness;
-    private boolean isPublic;
+
+    public LongLinkDto() {
+    }
+
+    public LongLinkDto(String link, int liveness) {
+        this.link = link;
+        this.liveness = liveness;
+    }
 
     public String getLink() {
         return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 
     public int getLiveness() {
         return liveness;
     }
 
-    public boolean isPublic() {
-        return isPublic;
+    public void setLiveness(int liveness) {
+        this.liveness = liveness;
     }
 }

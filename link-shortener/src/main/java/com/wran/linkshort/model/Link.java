@@ -4,34 +4,35 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Document(collection = "link")
-public class Link {
+public class Link implements Serializable {
 
-    @Id
-    private Long id;
     private String longLink;
-    @Indexed(unique = true)
-    private String shortenedLink;
+    @Id
+    private String shortLink;
     private Date created;
     private Date expires;
-    private boolean isPublic;
+    private int timesUsed;
     private boolean enabled;
+    private int creatorId;
 
     public Link() {
     }
 
-    public Link(String longLink, String shortenedLink, Date created, Date expires, boolean isPublic, boolean enabled) {
+    public Link(String longLink, String shortLink, Date created, Date expires,
+                int timesUsed, boolean enabled, int creatorId) {
         this.longLink = longLink;
-        this.shortenedLink = shortenedLink;
+        this.shortLink = shortLink;
         this.created = created;
         this.expires = expires;
-        this.isPublic = isPublic;
+        this.timesUsed = timesUsed;
         this.enabled = enabled;
+        this.creatorId = creatorId;
     }
 
-    public Long getId() { return id; }
 
     public String getLongLink() {
         return longLink;
@@ -41,12 +42,12 @@ public class Link {
         this.longLink = longLink;
     }
 
-    public String getShortenedLink() {
-        return shortenedLink;
+    public String getShortLink() {
+        return shortLink;
     }
 
-    public void setShortenedLink(String shortenedLink) {
-        this.shortenedLink = shortenedLink;
+    public void setShortLink(String shortLink) {
+        this.shortLink = shortLink;
     }
 
     public Date getCreated() {
@@ -65,19 +66,27 @@ public class Link {
         this.expires = expires;
     }
 
-    public boolean isPublic() {
-        return isPublic;
-    }
-
-    public void setPublic(boolean aPublic) {
-        isPublic = aPublic;
-    }
-
     public boolean isEnabled() {
         return enabled;
     }
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public int getTimesUsed() {
+        return timesUsed;
+    }
+
+    public void setTimesUsed(int timesUsed) {
+        this.timesUsed = timesUsed;
+    }
+
+    public int getCreatorId() {
+        return creatorId;
+    }
+
+    public void setCreatorId(int creatorId) {
+        this.creatorId = creatorId;
     }
 }
