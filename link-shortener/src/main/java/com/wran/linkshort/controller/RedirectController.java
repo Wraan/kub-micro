@@ -5,11 +5,13 @@ import com.wran.linkshort.service.LinkService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -21,6 +23,9 @@ public class RedirectController {
     @Autowired
     LinkService linkService;
 
+    @Value("${ingress.path}")
+    private String ingressPath;
+
     @GetMapping("/")
     @ResponseBody
     public String mainPage(){
@@ -29,10 +34,9 @@ public class RedirectController {
     }
 
     @GetMapping("/test")
-    @ResponseBody
     public String mainPage2(){
         LOGGER.info("Showing Home page2");
-        return "Hello2 :)";
+        return "redirect:http://www.google.com";
     }
 
     @GetMapping("/expired")
@@ -48,18 +52,21 @@ public class RedirectController {
     }
 
     @GetMapping("/{link}")
-    public String redirect(@PathVariable("link") String shortLink){
+    public void redirect(@PathVariable("link") String shortLink, HttpServletResponse response){
         Link link = linkService.findByShortLink(shortLink);
+        response.setStatus(302);
         if(link == null){
             LOGGER.info("Short link not found: {}", shortLink);
-            return "redirect:/not-found";
+            response.setHeader("Location", ingressPath + "/not-found");
+            return;
         }
         if(new Date().after(link.getExpires())){
             LOGGER.info("Short link expired: {}", shortLink);
-            return "redirect:/expired";
+            response.setHeader("Location", ingressPath + "/expired");
+            return;
         }
         LOGGER.info("Short link found: {} - redirecting to long link", link.getShortLink());
         link = linkService.increaseTimesUsed(link);
-        return "redirect:" + link.getLongLink();
+        response.setHeader("Location", link.getLongLink());
     }
 }
