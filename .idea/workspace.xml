@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3643c71-9bcc-429a-bc0c-593e55f73ce9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/job/cleaner/ExpiredLinkCleaner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/job/cleaner/ExpiredLinkPageCleaner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/RedirectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/RedirectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/repository/LinkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/repository/LinkRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/service/LinkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/service/LinkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/link-shortener/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/link-shortener/target/" />
     <ignored path="$PROJECT_DIR$/authorization-server/target/" />
@@ -43,12 +50,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/service/LinkService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="23" column="118" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="118" />
+            <state relative-caret-position="-129">
+              <caret line="105" column="23" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1143#1169#1" expanded="true" />
                 <element signature="e#1844#1845#0" expanded="true" />
                 <element signature="e#1910#1911#0" expanded="true" />
+                <element signature="e#2523#2524#0" expanded="true" />
+                <element signature="e#2570#2571#0" expanded="true" />
+                <element signature="e#2578#2579#0" expanded="true" />
+                <element signature="e#2615#2616#0" expanded="true" />
+                <element signature="e#2958#2959#0" expanded="true" />
+                <element signature="e#2997#2998#0" expanded="true" />
+                <element signature="e#3055#3056#0" expanded="true" />
+                <element signature="e#3097#3098#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,31 +73,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/RedirectController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
-              <folding>
-                <element signature="e#823#840#1" expanded="true" />
-                <element signature="e#1076#1077#0" expanded="true" />
-                <element signature="e#1108#1109#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="551">
+              <caret line="56" column="40" lean-forward="true" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/LongLinkDto.java">
+        <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/RedirectController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+            <state relative-caret-position="354">
+              <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/job/cleaner/ExpiredLinkCleaner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="671">
+              <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#568#569#0" expanded="true" />
+                <element signature="e#587#588#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/job/cleaner/ExpiredLinkPageCleaner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/repository/LinkRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="204">
+              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/link-shortener/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+            <state relative-caret-position="170">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -136,13 +164,15 @@
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/LinkDto.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/User.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/LongLinkDto.java" />
-        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java" />
         <option value="$PROJECT_DIR$/authorization-server/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/service/LinkService.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/Link.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/RedirectController.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/repository/LinkRepository.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/RedirectController.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/service/LinkService.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/job/cleaner/ExpiredLinkCleaner.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/job/cleaner/ExpiredLinkPageCleaner.java" />
       </list>
     </option>
   </component>
@@ -187,6 +217,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -236,6 +268,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="linkshort" type="462c0819:PsiDirectoryNode" />
+              <item name="cleaner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kub-micro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="link-shortener" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="linkshort" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -267,8 +308,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -285,6 +324,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RunDashboard">
@@ -355,21 +395,23 @@
       <workItem from="1563903370876" duration="3276000" />
       <workItem from="1563984239701" duration="7537000" />
       <workItem from="1564214437421" duration="3779000" />
+      <workItem from="1564985817840" duration="10750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39523000" />
+    <option name="totallyTimeSpent" value="50273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Image Layers" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.26652452" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.26918977" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Spring" order="0" />
@@ -380,7 +422,7 @@
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32936978" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50028753" side_tool="true" weight="0.32833788" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49971247" weight="0.39219934" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49971247" visible="true" weight="0.51137596" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -398,7 +440,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-      <window_info active="true" anchor="right" id="Maven" order="10" visible="true" weight="0.32942432" />
+      <window_info anchor="right" id="Maven" order="10" weight="0.32942432" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,25 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/Link.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/service/LinkService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="23" column="118" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="118" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1844#1845#0" expanded="true" />
-            <element signature="e#1910#1911#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/LongLinkDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -546,17 +569,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java">
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/Link.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="833">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/repository/LinkRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="204">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -565,19 +588,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/link-shortener/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        <state relative-caret-position="170">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="56" column="40" lean-forward="true" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/service/LinkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-129">
+          <caret line="105" column="23" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1143#1169#1" expanded="true" />
+            <element signature="e#1844#1845#0" expanded="true" />
+            <element signature="e#1910#1911#0" expanded="true" />
+            <element signature="e#2523#2524#0" expanded="true" />
+            <element signature="e#2570#2571#0" expanded="true" />
+            <element signature="e#2578#2579#0" expanded="true" />
+            <element signature="e#2615#2616#0" expanded="true" />
+            <element signature="e#2958#2959#0" expanded="true" />
+            <element signature="e#2997#2998#0" expanded="true" />
+            <element signature="e#3055#3056#0" expanded="true" />
+            <element signature="e#3097#3098#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/job/cleaner/ExpiredLinkCleaner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/RedirectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+        <state relative-caret-position="354">
+          <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/job/cleaner/ExpiredLinkPageCleaner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
           <folding>
-            <element signature="e#823#840#1" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

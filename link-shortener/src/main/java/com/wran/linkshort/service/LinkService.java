@@ -1,5 +1,6 @@
 package com.wran.linkshort.service;
 
+import com.wran.linkshort.job.cleaner.ExpiredLinkCleaner;
 import com.wran.linkshort.model.Link;
 import com.wran.linkshort.model.LongLinkDto;
 import com.wran.linkshort.repository.LinkRepository;
@@ -7,16 +8,17 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Optional;
+import java.util.*;
 
 @Service("linkService")
 public class LinkService {
 
-    Logger LOGGER = LogManager.getLogger(getClass());
+    private Logger LOGGER = LogManager.getLogger(getClass());
+    public final static int PAGE_SIZE = 1000;
 
     @Autowired
     private LinkRepository linkRepository;
@@ -71,13 +73,57 @@ public class LinkService {
     public Link findByShortLink(String shortLink){
         return linkRepository.findByShortLink(shortLink).orElse(null);
     }
-    public Iterable<Link> findAll(){
+    public List<Link> findAll(){
         return linkRepository.findAll();
-
     }
 
     public Link increaseTimesUsed(Link link) {
         link.setTimesUsed(link.getTimesUsed() + 1);
         return linkRepository.save(link);
+    }
+
+    public long countAll(){
+        return linkRepository.count();
+    }
+
+    public List<Link> findAllByPage(int page){
+        return linkRepository.findAll(PageRequest.of(page, PAGE_SIZE)).getContent();
+    }
+
+    public Iterable<Link> saveAll(List<Link> links){
+        return linkRepository.saveAll(links);
+    }
+    public void deleteAll(List<Link> links){
+        linkRepository.deleteAll(links);
+    }
+
+    public void addTestData(int amount){
+        List<Link> links = new ArrayList<>();
+
+        Date now = new Date();
+
+        for(int i = 1; i <= amount; i++){
+            if(i % 2500 == 0 && i > 0)
+                LOGGER.info("Test data added {}/{}", i, amount);
+
+            Random random = new Random();
+            String shortLink = generateShortLink(linkGeneratorLength);
+            while(shortLinkExists(shortLink)){
+                shortLink = generateShortLink(linkGeneratorLength);
+            }
+
+            Calendar expiresDate = Calendar.getInstance();
+            expiresDate.setTime(now);
+            expiresDate.add(Calendar.MINUTE, random.nextInt(30));
+
+            Link link = new Link("https://www.google.com", shortLink, now, expiresDate.getTime(), random.nextInt(100), true, 0);
+            links.add(link);
+        }
+        saveAll(links);
+    }
+
+    public void cleanExpiredLinks(){
+        Thread cleaner = new Thread(new ExpiredLinkCleaner(this));
+        cleaner.start();
     }
 }

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api")
 public class LinkController {
 
-    Logger LOGGER = LogManager.getLogger(getClass());
+    private Logger LOGGER = LogManager.getLogger(getClass());
 
     @Autowired
     public LinkService linkService;
@@ -42,6 +42,19 @@ public class LinkController {
     public ResponseEntity delete(@PathVariable("shortLink") String shortLink){
         LOGGER.info("Short link deleted: {}", shortLink);
         linkService.deleteByShortLink(shortLink);
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
+    @GetMapping("/testData")
+    public ResponseEntity addTestData(){
+        LOGGER.info("Adding 10000 test links to database");
+        linkService.addTestData(10000);
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
+    @GetMapping("/cleanExpired")
+    public ResponseEntity cleanExpired(){
+        linkService.cleanExpiredLinks();
         return new ResponseEntity(HttpStatus.OK);
     }
 

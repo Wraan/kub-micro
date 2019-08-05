@@ -18,7 +18,7 @@ import java.util.Date;
 @Controller
 public class RedirectController {
 
-    Logger LOGGER = LogManager.getLogger(getClass());
+    private Logger LOGGER = LogManager.getLogger(getClass());
 
     @Autowired
     LinkService linkService;
@@ -51,6 +51,12 @@ public class RedirectController {
         return "Not found";
     }
 
+    @GetMapping("/disabled")
+    @ResponseBody
+    public String disabled(){
+        return "Not found";
+    }
+
     @GetMapping("/{link}")
     public void redirect(@PathVariable("link") String shortLink, HttpServletResponse response){
         Link link = linkService.findByShortLink(shortLink);
@@ -63,6 +69,11 @@ public class RedirectController {
         if(new Date().after(link.getExpires())){
             LOGGER.info("Short link expired: {}", shortLink);
             response.setHeader("Location", ingressPath + "/expired");
+            return;
+        }
+        if(!link.isEnabled()){
+            LOGGER.info("Short link disabled: {}", shortLink);
+            response.setHeader("Location", ingressPath + "/disabled");
             return;
         }
         LOGGER.info("Short link found: {} - redirecting to long link", link.getShortLink());
