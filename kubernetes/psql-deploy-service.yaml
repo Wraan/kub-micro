@@ -48,6 +48,7 @@ metadata:
   labels:
     app: postgres-auth
 spec:
+  type: NodePort
   ports:
    - port: 5432
      protocol: TCP

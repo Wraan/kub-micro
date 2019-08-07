@@ -4,8 +4,11 @@ import com.wran.linkshort.service.LinkService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
 public class ExpiredLinkCleaner implements Runnable{
@@ -19,6 +22,7 @@ public class ExpiredLinkCleaner implements Runnable{
 
     public void run() {
         LOGGER.info("Expired links cleaner has started.");
+        List<Future<?>> futures = new ArrayList<>();
         ExecutorService executor = Executors.newFixedThreadPool(4);
 
         long count = linkService.countAll();
@@ -28,7 +32,7 @@ public class ExpiredLinkCleaner implements Runnable{
         long startTime = System.currentTimeMillis();
 
         for(int i=0; i < pages; i++){
-            executor.submit(new ExpiredLinkPageCleaner(i, linkService));
+            futures.add(executor.submit(new ExpiredLinkPageCleaner(i, linkService)));
             LOGGER.info("New page cleaner has been created [{}/{}]", i+1, pages);
         }
 
