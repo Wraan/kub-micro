@@ -1,7 +1,6 @@
-package com.wran.linkshort.config;
+package com.wran.authorizationserver.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -10,22 +9,14 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
-import org.springframework.security.oauth2.provider.token.AuthorizationServerTokenServices;
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
-import org.springframework.security.oauth2.provider.token.RemoteTokenServices;
+import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
-
+import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 //@Configuration
 //@EnableResourceServer
-public class OAuth2ResourceServerConfigRemoteTokenStore extends ResourceServerConfigurerAdapter {
-
-    @Value("${security.oauth2.client.access-token-uri}")
-    private String tokenEndpointUrl;
-    @Value("${security.oauth2.client.client-id}")
-    private String clientId;
-    @Value("${security.oauth2.client.client-secret}")
-    private String clientSecret;
+public class OAuth2ResourceServerConfigJwt extends ResourceServerConfigurerAdapter {
 
     @Autowired
     private CustomAccessTokenConverter customAccessTokenConverter;
@@ -37,26 +28,30 @@ public class OAuth2ResourceServerConfigRemoteTokenStore extends ResourceServerCo
                 .authorizeRequests().anyRequest().permitAll();
     }
 
-    @Primary
+    @Override
+    public void configure(final ResourceServerSecurityConfigurer config) {
+        config.tokenServices(tokenServices());
+        config.resourceId("users");
+    }
+
     @Bean
-    public RemoteTokenServices tokenServices(){
-        final RemoteTokenServices tokenServices = new RemoteTokenServices();
-        tokenServices.setCheckTokenEndpointUrl(tokenEndpointUrl);
-        tokenServices.setClientId(clientId);
-        tokenServices.setClientSecret(clientSecret);
-        tokenServices.setAccessTokenConverter(accessTokenConverter());
-        return tokenServices;
+    @Primary
+    public DefaultTokenServices tokenServices() {
+        final DefaultTokenServices defaultTokenServices = new DefaultTokenServices();
+        defaultTokenServices.setTokenStore(tokenStore());
+        return defaultTokenServices;
+    }
+
+    @Bean
+    public TokenStore tokenStore() {
+        return new JwtTokenStore(accessTokenConverter());
     }
 
     @Bean
     public JwtAccessTokenConverter accessTokenConverter() {
         final JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
         converter.setAccessTokenConverter(customAccessTokenConverter);
+        converter.setSigningKey("123");
         return converter;
-    }
-
-    @Override
-    public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
-        resources.resourceId("links");
     }
 }

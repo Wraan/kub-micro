@@ -1,11 +1,13 @@
 package com.wran.linkshort.controller;
 
+import com.wran.linkshort.client.OAuthTokenLoginClient;
 import com.wran.linkshort.model.Link;
 import com.wran.linkshort.model.LongLinkDto;
 import com.wran.linkshort.service.LinkService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +20,12 @@ public class LinkController {
 
     @Autowired
     public LinkService linkService;
+
+    @Value("${security.oauth2.client.client-id}")
+    private String clientId;
+    @Value("${security.oauth2.client.client-secret}")
+    private String clientSecret;
+
 
     @PostMapping("/")
     public Link add(@RequestBody LongLinkDto longLinkDto) {
@@ -57,5 +65,8 @@ public class LinkController {
         linkService.cleanExpiredLinks();
         return new ResponseEntity(HttpStatus.OK);
     }
+
+
+
 
 }

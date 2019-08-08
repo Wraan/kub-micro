@@ -1,6 +1,6 @@
  INSERT INTO oauth_client_details (client_id, client_secret, web_server_redirect_uri, scope, access_token_validity, refresh_token_validity, resource_ids, authorized_grant_types, additional_information)
     VALUES ('mobile', '{bcrypt}$2a$10$dXJ3SW6G7P50lGmMkkmwe.20cQQubK3.HZWzG3YB1tlRy.fqvM/BG', 'http://localhost:8080/code', 'READ,WRITE', '3600', '10000', 'inventory,payment', 'authorization_code,password,refresh_token,implicit', '{}'),
-           ('link-shortener', '{bcrypt}$2a$10$dXJ3SW6G7P50lGmMkkmwe.20cQQubK3.HZWzG3YB1tlRy.fqvM/BG', 'http://localhost:8080/code', 'READ,WRITE', '3600', '10000', 'links', 'authorization_code,password,refresh_token,implicit', '{}')
+           ('link-shortener', '{bcrypt}$2a$10$dXJ3SW6G7P50lGmMkkmwe.20cQQubK3.HZWzG3YB1tlRy.fqvM/BG', 'http://localhost:8080/code', 'READ,WRITE', '3600', '10000', 'links, users', 'authorization_code,password,refresh_token,implicit', '{}')
     ON CONFLICT ON CONSTRAINT oauth_client_details_pkey DO NOTHING;
 
  INSERT INTO PERMISSION (NAME) VALUES

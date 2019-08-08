@@ -2,19 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3643c71-9bcc-429a-bc0c-593e55f73ce9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/CustomTokenEnhancer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/CustomAccessTokenConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/MethodSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/OAuth2ResourceServerConfigJwt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/OAuth2ResourceServerConfigRemoteTokenStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/SecuredController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/CustomAccessTokenConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/MethodSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/OAuth2ResourceServerConfigJwt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/OAuthTokenLoginClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/config/CustomFeignClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/TokenLoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/TokenResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/UserCreateDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/AuthorizationServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/AuthorizationServerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/AuthorizationServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/AuthorizationServerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/WebSecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/WebSecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes/psql-deploy-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes/psql-deploy-service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/link-shortener/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/job/cleaner/ExpiredLinkCleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/job/cleaner/ExpiredLinkCleaner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/OAuth2ResourceServerConfigRemoteTokenStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/OAuth2ResourceServerConfigRemoteTokenStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/link-shortener/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/link-shortener/target/" />
@@ -45,70 +53,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/SecuredController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/OAuth2ResourceServerConfigRemoteTokenStore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/MethodSecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="56" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
-              <caret line="56" column="40" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/CustomAccessTokenConverter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/OAuth2ResourceServerConfigJwt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="745">
-              <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+            <state relative-caret-position="743">
+              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/OAuthTokenLoginClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/WebSecurityConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="30" column="57" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -126,28 +98,66 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/WebSecurityConfiguration.java">
+        <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/OAuth2ResourceServerConfigJwt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="-17">
+              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/AuthorizationServerApplication.java">
+        <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/MethodSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="85">
+              <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/CustomAccessTokenConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/AuthorizationServerConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/OAuth2ResourceServerConfigRemoteTokenStore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="24" selection-start-line="24" selection-end-line="27" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1295#1339#1" expanded="true" />
+                <element signature="e#1389#1426#1" expanded="true" />
+                <element signature="e#1468#1509#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/AuthorizationServerConfiguration.java">
+        <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/TokenLoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+            <state relative-caret-position="476">
+              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#603#640#1" expanded="true" />
+                <element signature="e#682#723#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,30 +184,47 @@
         <option value="$PROJECT_DIR$/authorization-server/Dockerfile" />
         <option value="$PROJECT_DIR$/authorization-server/src/main/resources/schema.sql" />
         <option value="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/model/User.java" />
-        <option value="$PROJECT_DIR$/authorization-server/pom.xml" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/LinkDto.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/User.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/LongLinkDto.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/Link.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/RedirectController.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/repository/LinkRepository.java" />
-        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/service/LinkService.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/job/cleaner/ExpiredLinkPageCleaner.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/job/cleaner/ExpiredLinkCleaner.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/test/java/com/wran/linkshort/service/LinkServiceTest.java" />
-        <option value="$PROJECT_DIR$/authorization-server/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/Oauth2ResourceServerConfigRemoteTokenStore.java" />
-        <option value="$PROJECT_DIR$/link-shortener/pom.xml" />
-        <option value="$PROJECT_DIR$/link-shortener/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/MethodSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/authorization-server/src/main/resources/data.sql" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/CustomAccessTokenConverter.java" />
-        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/SecuredController.java" />
         <option value="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/CustomTokenEnhancer.java" />
-        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/OAuth2ResourceServerConfigRemoteTokenStore.java" />
         <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/OAuth2ResourceServerConfigJwt.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/SecuredController.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/OAuth2ResourceServerConfigRemoteTokenStore.java" />
+        <option value="$PROJECT_DIR$/authorization-server/src/main/resources/data.sql" />
+        <option value="$PROJECT_DIR$/link-shortener/pom.xml" />
+        <option value="$PROJECT_DIR$/authorization-server/pom.xml" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/UserCreateDto.java" />
+        <option value="$PROJECT_DIR$/authorization-server/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/TokenResponseDto.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/UserClient.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/OAuthTokenGetter.java" />
+        <option value="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/WebSecurityConfiguration.java" />
+        <option value="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/AuthorizationServerApplication.java" />
         <option value="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/AuthorizationServerConfiguration.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/CustomFeignClientConfig.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/config/BasicAuthInterceptor.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/OAuthTokenGetterClient.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/config/CustomFeignClientConfig.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/OAuthTokenLoginClient.java" />
+        <option value="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/TokenLoginController.java" />
+        <option value="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/CustomAccessTokenConverter.java" />
+        <option value="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/MethodSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/OAuth2ResourceServerConfigJwt.java" />
       </list>
     </option>
   </component>
@@ -287,6 +314,15 @@
             </path>
             <path>
               <item name="kub-micro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="authorization-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="authorizationserver" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kub-micro" type="b2602c69:ProjectViewProjectNode" />
               <item name="link-shortener" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -314,6 +350,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="linkshort" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kub-micro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="link-shortener" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="linkshort" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kub-micro" type="b2602c69:ProjectViewProjectNode" />
@@ -333,6 +378,13 @@
               <item name="linkshort" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="kub-micro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="link-shortener" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -348,7 +400,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/authorization-server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -362,7 +414,11 @@
       <recent name="com.wran.linkshort" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wran.authorizationserver.config" />
       <recent name="com.wran.linkshort.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projekty\kub-micro\authorization-server\src\main\java\com\wran\authorizationserver\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -436,12 +492,13 @@
       <workItem from="1564985817840" duration="12277000" />
       <workItem from="1565078937197" duration="50000" />
       <workItem from="1565081844087" duration="3567000" />
-      <workItem from="1565167462021" duration="16891000" />
+      <workItem from="1565167462021" duration="17149000" />
+      <workItem from="1565254346975" duration="10136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72308000" />
+    <option name="totallyTimeSpent" value="82702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -452,7 +509,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.32936078" />
@@ -463,12 +520,12 @@
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32936978" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50028753" side_tool="true" weight="0.32833788" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49971247" weight="0.46153846" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49971247" visible="true" weight="0.3033586" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Hybris Console" order="15" />
       <window_info anchor="right" id="Maven Projects" order="0" visible="true" weight="0.32949972" />
@@ -600,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link-shortener/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="68" selection-start-line="68" selection-start-column="4" selection-end-line="71" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/service/UserDetailServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -621,24 +671,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/ResourceServerTokenServicesConfiguration.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
           <caret line="120" column="234" selection-start-line="120" selection-start-column="234" selection-end-line="120" selection-end-column="234" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/authorization-server/src/main/resources/data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -656,10 +692,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.0.8.RELEASE/spring-beans-5.0.8.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/Autowired.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/LinkShortenerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="306">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#965#966#0" expanded="true" />
@@ -668,58 +711,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/AuthorizationServerApplication.java">
+    <entry file="file://$PROJECT_DIR$/link-shortener/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="230">
+          <caret line="47" selection-start-line="47" selection-end-line="50" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/authorization-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="59" column="34" lean-forward="true" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
+        <state relative-caret-position="824">
+          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/authorization-server/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="61" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="56" column="40" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
+        <state relative-caret-position="340">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/SecuredController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        <state relative-caret-position="456">
+          <caret line="31" column="46" selection-start-line="31" selection-start-column="46" selection-end-line="31" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/CustomTokenEnhancer.java">
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/UserCreateDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="-2">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/WebSecurityConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/authorization-server/src/main/resources/data.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="493">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
@@ -733,6 +766,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/AuthorizationServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/CustomAccessTokenConverter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -743,20 +797,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/OAuth2ResourceServerConfigRemoteTokenStore.java">
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/config/BasicAuthInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/model/TokenResponseDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/config/CustomFeignClientConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+          <folding>
+            <element signature="e#707#751#1" expanded="true" />
+            <element signature="e#797#834#1" expanded="true" />
+            <element signature="e#876#917#1" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1203#1204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/LinkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding>
+            <element signature="e#926#963#1" expanded="true" />
+            <element signature="e#1005#1046#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/OAuth2ResourceServerConfigJwt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
-          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        <state relative-caret-position="743">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/config/OAuth2ResourceServerConfigRemoteTokenStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="24" selection-start-line="24" selection-end-line="27" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1295#1339#1" expanded="true" />
+            <element signature="e#1389#1426#1" expanded="true" />
+            <element signature="e#1468#1509#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/OAuthTokenLoginClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -765,8 +874,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/AuthorizationServerConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        <state relative-caret-position="17">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/CustomAccessTokenConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/MethodSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/OAuth2ResourceServerConfigJwt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/WebSecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="30" column="57" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authorization-server/src/main/java/com/wran/authorizationserver/config/CustomTokenEnhancer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/TokenLoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#603#640#1" expanded="true" />
+            <element signature="e#682#723#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
