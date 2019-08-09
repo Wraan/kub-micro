@@ -1,4 +1,4 @@
-package com.wran.authorizationserver.model;
+package com.wran.authorizationserver.model.oauth;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class AuthUserDetail extends User implements UserDetails {
+public class AuthUserDetails extends User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -16,9 +16,9 @@ public class AuthUserDetail extends User implements UserDetails {
 
         getRoles().forEach(role ->{
             grantedAuthorities.add(new SimpleGrantedAuthority(role.getName()));
-            role.getPermissions().forEach(permission -> {
-                grantedAuthorities.add(new SimpleGrantedAuthority(permission.getName()));
-            });
+//            role.getPermissions().forEach(permission -> {
+//                grantedAuthorities.add(new SimpleGrantedAuthority(permission.getName()));
+//            });
         });
 
         return grantedAuthorities;
@@ -54,7 +54,7 @@ public class AuthUserDetail extends User implements UserDetails {
         return super.isEnabled();
     }
 
-    public AuthUserDetail(User user){
+    public AuthUserDetails(User user){
         super(user);
     }
 }

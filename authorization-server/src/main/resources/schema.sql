@@ -1,10 +1,8 @@
-drop table if exists permission_role;
+drop table if exists oauth_client_details;
 drop table if exists role_user;
-drop table if exists permission;
 drop table if exists role;
 drop table if exists users;
 
-drop table if exists oauth_client_details;
 drop table if exists oauth_client_token;
 drop table if exists oauth_access_token;
 drop table if exists oauth_refresh_token;
@@ -25,12 +23,6 @@ create table if not exists oauth_client_details (
   autoapprove VARCHAR(256)
 );
 
-create table if not exists permission (
-  id serial PRIMARY KEY,
-  name varchar(512) default null,
-  unique(name)
-);
-
 create table if not exists role (
   id serial PRIMARY KEY,
   name varchar(255) default null,
@@ -42,16 +34,11 @@ create table if not exists users (
   username varchar(100) not null,
   password varchar(1024) not null,
   email varchar(1024) not null,
-  enabled smallint not null,
-  account_non_expired smallint not null,
-  credentials_non_expired smallint not null,
-  account_non_locked smallint not null,
+  enabled boolean not null,
+  account_non_expired boolean not null,
+  credentials_non_expired boolean not null,
+  account_non_locked boolean not null,
   unique(username)
-);
-
-create table if not exists permission_role (
-  permission_id INTEGER default null references permission (id),
-  role_id INTEGER default null references role (id)
 );
 
 create table if not exists role_user (

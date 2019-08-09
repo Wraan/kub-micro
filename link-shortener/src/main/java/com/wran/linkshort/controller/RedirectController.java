@@ -33,12 +33,6 @@ public class RedirectController {
         return "Hello :)";
     }
 
-    @GetMapping("/test")
-    public String mainPage2(){
-        LOGGER.info("Showing Home page2");
-        return "redirect:http://www.google.com";
-    }
-
     @GetMapping("/expired")
     @ResponseBody
     public String expiredPage(){
@@ -54,7 +48,7 @@ public class RedirectController {
     @GetMapping("/disabled")
     @ResponseBody
     public String disabled(){
-        return "Not found";
+        return "Disabled";
     }
 
     @GetMapping("/{link}")
@@ -76,8 +70,8 @@ public class RedirectController {
             response.setHeader("Location", ingressPath + "/disabled");
             return;
         }
-        LOGGER.info("Short link found: {} - redirecting to long link", link.getShortLink());
         link = linkService.increaseTimesUsed(link);
+        LOGGER.info("Short link found: {} - redirecting to long link.", link.getShortLink());
         response.setHeader("Location", link.getLongLink());
     }
 }

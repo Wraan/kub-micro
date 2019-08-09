@@ -1,7 +1,6 @@
 package com.wran.linkshort.model;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
@@ -17,20 +16,20 @@ public class Link implements Serializable {
     private Date expires;
     private int timesUsed;
     private boolean enabled;
-    private int creatorId;
+    private String creator;
 
     public Link() {
     }
 
     public Link(String longLink, String shortLink, Date created, Date expires,
-                int timesUsed, boolean enabled, int creatorId) {
+                int timesUsed, boolean enabled, String creator) {
         this.longLink = longLink;
         this.shortLink = shortLink;
         this.created = created;
         this.expires = expires;
         this.timesUsed = timesUsed;
         this.enabled = enabled;
-        this.creatorId = creatorId;
+        this.creator = creator;
     }
 
 
@@ -82,11 +81,11 @@ public class Link implements Serializable {
         this.timesUsed = timesUsed;
     }
 
-    public int getCreatorId() {
-        return creatorId;
+    public String getCreator() {
+        return creator;
     }
 
-    public void setCreatorId(int creatorId) {
-        this.creatorId = creatorId;
+    public void setCreator(String creator) {
+        this.creator = creator;
     }
 }

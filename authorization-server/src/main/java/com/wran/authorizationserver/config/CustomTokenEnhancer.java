@@ -1,6 +1,6 @@
 package com.wran.authorizationserver.config;
 
-import com.wran.authorizationserver.model.User;
+import com.wran.authorizationserver.model.oauth.User;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;

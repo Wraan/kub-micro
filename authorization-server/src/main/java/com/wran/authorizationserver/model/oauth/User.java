@@ -1,4 +1,4 @@
-package com.wran.authorizationserver.model;
+package com.wran.authorizationserver.model.oauth;
 
 import javax.persistence.*;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "username")
@@ -42,6 +42,18 @@ public class User {
         this.credentialsNonExpired = user.isCredentialsNonExpired();
         this.accountNonLocked = user.isAccountNonLocked();
         this.roles = user.getRoles();
+    }
+
+    public User(String username, String password, String email, boolean enabled, boolean accountNonExpired,
+                boolean credentialsNonExpired, boolean accountNonLocked, List<Role> roles) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.enabled = enabled;
+        this.accountNonExpired = accountNonExpired;
+        this.credentialsNonExpired = credentialsNonExpired;
+        this.accountNonLocked = accountNonLocked;
+        this.roles = roles;
     }
 
     public Long getId() {

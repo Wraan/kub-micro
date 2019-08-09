@@ -40,7 +40,7 @@ public class LinkService {
         calendar.add(Calendar.MINUTE, longLink.getLiveness());
         Date expires = calendar.getTime();
 
-        return new Link(longLink.getLink(), shortLink, now, expires, 0, true, 0);
+        return new Link(longLink.getLink(), shortLink, now, expires, 0, true, "anon");
 
     }
 
@@ -58,9 +58,11 @@ public class LinkService {
         return linkRepository.existsByShortLink(shortLink);
     }
 
-
     public Link save(Link link){
         return linkRepository.save(link);
+    }
+    public Iterable<Link> saveAll(List<Link> links){
+        return linkRepository.saveAll(links);
     }
 
     public void delete(Link link){
@@ -69,12 +71,18 @@ public class LinkService {
     public void deleteByShortLink(String shortLink){
         linkRepository.deleteByShortLink(shortLink);
     }
+    public void deleteAll(List<Link> links){
+        linkRepository.deleteAll(links);
+    }
 
     public Link findByShortLink(String shortLink){
         return linkRepository.findByShortLink(shortLink).orElse(null);
     }
     public List<Link> findAll(){
         return linkRepository.findAll();
+    }
+    public List<Link> findAllByPage(int page){
+        return linkRepository.findAll(PageRequest.of(page, PAGE_SIZE)).getContent();
     }
 
     public Link increaseTimesUsed(Link link) {
@@ -86,24 +94,13 @@ public class LinkService {
         return linkRepository.count();
     }
 
-    public List<Link> findAllByPage(int page){
-        return linkRepository.findAll(PageRequest.of(page, PAGE_SIZE)).getContent();
-    }
-
-    public Iterable<Link> saveAll(List<Link> links){
-        return linkRepository.saveAll(links);
-    }
-    public void deleteAll(List<Link> links){
-        linkRepository.deleteAll(links);
-    }
-
     public void addTestData(int amount){
         List<Link> links = new ArrayList<>();
 
         Date now = new Date();
 
         for(int i = 1; i <= amount; i++){
-            if(i % 2500 == 0 && i > 0)
+            if((amount < 2500 && i == amount) || (i > 0 && i % 2500 == 0))
                 LOGGER.info("Test data added {}/{}", i, amount);
 
             Random random = new Random();
@@ -116,7 +113,8 @@ public class LinkService {
             expiresDate.setTime(now);
             expiresDate.add(Calendar.MINUTE, random.nextInt(30));
 
-            Link link = new Link("https://www.google.com", shortLink, now, expiresDate.getTime(), random.nextInt(100), true, 0);
+            Link link = new Link("https://www.google.com", shortLink, now, expiresDate.getTime(),
+                    random.nextInt(100), true, "anon");
             links.add(link);
         }
         saveAll(links);
