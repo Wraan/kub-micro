@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3643c71-9bcc-429a-bc0c-593e55f73ce9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes/auth-server-deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes/auth-server-deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes/link-shortener-deploy.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes/link-shortener-deploy.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/OAuthTokenLoginClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/client/OAuthTokenLoginClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/RedirectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/RedirectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/SecuredController.java" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/src/main/java/com/wran/linkshort/controller/SecuredController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/link-shortener/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/link-shortener/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="c3643c71-9bcc-429a-bc0c-593e55f73ce9" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/link-shortener/target/" />
     <ignored path="$PROJECT_DIR$/authorization-server/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -387,20 +375,19 @@
       <workItem from="1565167462021" duration="17149000" />
       <workItem from="1565254346975" duration="15868000" />
       <workItem from="1565339491407" duration="11575000" />
-      <workItem from="1566035341950" duration="4830000" />
+      <workItem from="1566035341950" duration="5224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104881000" />
+    <option name="totallyTimeSpent" value="105275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1753" height="954" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.32936078" />
-      <window_info anchor="right" id="Maven Projects" order="0" visible="true" weight="0.16906267" />
+      <window_info active="true" anchor="right" id="Maven Projects" order="0" visible="true" weight="0.16906267" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="0" />
@@ -415,11 +402,11 @@
       <window_info id="Image Layers" order="1" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49971247" visible="true" weight="0.3115339" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49971247" weight="0.3115339" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Spring" order="1" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32936078" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.18458885" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.18458885" />
       <window_info anchor="right" id="Bean Validation" order="5" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />

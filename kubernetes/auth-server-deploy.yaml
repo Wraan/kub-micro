@@ -30,8 +30,8 @@ spec:
     spec:
       containers:
       - name: auth-server
-        image: auth-server
-        imagePullPolicy: Never
+        image: zibix12/auth-server:latest
+#        imagePullPolicy: Never
         ports:
         - containerPort: 8801
         env:

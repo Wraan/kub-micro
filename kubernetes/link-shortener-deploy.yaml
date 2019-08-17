@@ -47,8 +47,8 @@ spec:
     spec:
       containers:
       - name: link-shortener
-        image: link-shortener
-        imagePullPolicy: Never
+        image: zibix12/link-shortener:latest
+#        imagePullPolicy: Never
         ports:
         - containerPort: 8080
         env:
