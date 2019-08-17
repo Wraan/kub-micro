@@ -23,7 +23,7 @@ public class RedirectController {
     @Autowired
     LinkService linkService;
 
-    @Value("${ingress.path}")
+    @Value("${ingress.service.path}")
     private String ingressPath;
 
     @GetMapping("/")

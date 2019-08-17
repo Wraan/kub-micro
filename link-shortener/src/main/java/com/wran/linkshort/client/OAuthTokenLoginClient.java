@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 
-//@FeignClient(name = "auth-server", url = "${auth-server.client.url}", configuration = CustomFeignClientConfig.class)
-@FeignClient(name = "auth-server", url = "${auth-server.client.url}")
+//@FeignClient(name = "auth-server", url = "${feign.client.auth-server.url}", configuration = CustomFeignClientConfig.class)
+//@FeignClient(name = "auth-server", url = "${feign.client.auth-server.url}")
+@FeignClient(name = "auth-server")
 public interface OAuthTokenLoginClient {
 
     @PostMapping("/oauth/token")

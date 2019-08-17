@@ -12,7 +12,7 @@ import java.util.Map;
 @RestController
 public class SecuredController {
 
-    @PreAuthorize("#oauth2.hasScope('READ') and hasRole('ROLE_USER')")
+    @PreAuthorize("#oauth2.hasScope('READ')")
     @GetMapping("/secured/extras")
     public Map<String, Object> getExtraInfo(Authentication auth) {
         OAuth2AuthenticationDetails oauthDetails

@@ -5,6 +5,7 @@ metadata:
   labels:
     app: auth-server
 spec:
+  type: NodePort
   ports:
   - port: 8801
     protocol: TCP

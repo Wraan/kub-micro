@@ -5,11 +5,29 @@ metadata:
   labels:
     app: link-shortener
 spec:
+  type: NodePort
   ports:
   - port: 8080
     protocol: TCP
   selector:
     app: link-shortener
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: link-shortener
+data:
+  hibernate_dll-auto: create 
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: link-shortener
+type: Opaque
+data:
+  client_id: bGluay1zaG9ydGVuZXI=
+  client_secret: cGFzc3dvcmQ=
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -49,3 +67,18 @@ spec:
             secretKeyRef:
               name: mongodb
               key: database-password
+        - name: HIBERNATE_DLL-AUTO
+          valueFrom:
+            configMapKeyRef:
+              name: link-shortener
+              key: hibernate_dll-auto
+        - name: CLIENT_ID
+          valueFrom:
+            secretKeyRef:
+              name: link-shortener
+              key: client_id
+        - name: CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: link-shortener
+              key: client_secret
